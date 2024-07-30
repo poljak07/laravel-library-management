@@ -23,7 +23,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return('create');
     }
 
     /**
@@ -31,15 +31,17 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return('store');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Book $book)
     {
-        //
+        return view('books.show', [
+            'book' => $book
+        ]);
     }
 
     /**
@@ -47,7 +49,7 @@ class BookController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return('edit');
     }
 
     /**
@@ -55,7 +57,7 @@ class BookController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return('update');
     }
 
     /**
@@ -63,6 +65,6 @@ class BookController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return('destroy');
     }
 }
